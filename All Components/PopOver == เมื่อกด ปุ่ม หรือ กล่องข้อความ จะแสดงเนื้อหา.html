@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopOvers</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.js"></script>  
+    <script src="js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container my-4">
+          <!-- JavaScript Widget -->
+          <!-- PopOvers -->
+          <!-- เมื่อกด ปุ่ม หรือ กล่องข้อความ จะแสดงเนื้อหา -->
+          <!-- ต้อง import  <script src="js/bootstrap.bundle.js"></script> เข้ามา -->
+          
+        <button class="btn btn-danger"
+            data-bs-toggle="popover"
+            title="ที่อยู่ของฉัน"
+            data-bs-content="บ้านโปรแกรมเมอร์ อำเภอเมือง จังหวัดระยอง 55555"
+        >คลิกเพื่อดูรายละเอียดที่อยู่</button>
+    </div>
+
+    <!-- สคริปจากในเว็บ bootstrap ใช้เพื่อเปิดการใช้งาน วิดเจด popover -->
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    });
+    </script>
+</body>
+</html>
