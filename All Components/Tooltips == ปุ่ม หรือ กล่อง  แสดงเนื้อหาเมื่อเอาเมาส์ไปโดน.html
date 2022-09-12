@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.js"></script>  
+    <script src="js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container my-4">
+          <!-- JavaScript Widget -->
+          <!-- Tooltip -->
+          <!-- ปุ่ม หรือ กล่องข้อความ แสดงเนื้อหาเมื่อเอาเมาส์ไปแตะ -->
+          <!-- ต้อง import > <script src="js/bootstrap.bundle.js"></script> เข้ามา -->
+            <!-- ต้องไปก็อปสคิปจากเว็บ bootstrap มาด้วย แบบด้านล่าง -->
+
+            <!-- bottom == แสดงด้านล่าง -->
+            <!-- left == แสดงด้านซ้าย -->
+            <!-- right == แสดงด้านขวา -->
+            <!-- top == แสดงด้านบน -->
+            <!-- สามาใส่แท็ก สี ตำ หนา เอียง หรือ แท็ก h1 - h6 ให้แสดงเนื้อหาได้ -->
+        <button 
+             class="btn btn-primary"
+             data-bs-toggle="tooltip"
+             data-bs-placement="bottom"
+             title="13:00 - 19:00"
+        >เวลาทำการเพจ</button>
+        <hr>
+        <button 
+             class="btn btn-primary"
+             data-bs-toggle="tooltip"
+             data-bs-placement="left"
+             title="13:00 - 19:00"
+        >เวลาทำการเพจ</button>
+        <hr>
+        <button 
+             class="btn btn-primary"
+             data-bs-toggle="tooltip"
+             data-bs-placement="right"
+             title="13:00 - 19:00"
+        >เวลาทำการเพจ</button>
+        <hr>
+        <button 
+             class="btn btn-primary"
+             data-bs-toggle="tooltip"
+             data-bs-placement="top"
+             title="13:00 - 19:00"
+        >เวลาทำการเพจ</button>
+        <hr>
+        <button 
+             class="btn btn-primary"
+             data-bs-toggle="tooltip"
+             data-bs-placement="top"
+             title="<h4>13:00 - 19:00</h4>"
+             data-bs-html="true"
+        >เวลาทำการเพจ</button>
+    </div>
+
+    <!-- สคริป ที่ก็อปมาจาก เว็บ bootstrap เพื่อให้ วิดเจดนี้ทำงาน -->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+    </script>
+</body>
+</html>
